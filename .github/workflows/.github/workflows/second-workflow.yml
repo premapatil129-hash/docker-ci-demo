@@ -1,0 +1,21 @@
+name: Second Workflow
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Print Message
+        run: echo "Hello from the Second Workflow!"
+
+      - name: Show Date
+        run: date
